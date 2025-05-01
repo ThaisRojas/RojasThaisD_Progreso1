@@ -21,6 +21,7 @@ namespace RojasT_ClinicaV_P1.Models
 
         [DataType(DataType.Date)]
         public DateTime FechaRegistro { get; set; }
+        public List<Mascota> Mascotas { get; set; } = new List<Mascota>();
     }
 }
 
