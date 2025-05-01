@@ -1,13 +1,12 @@
 ﻿using System;
 using System.ComponentModel.DataAnnotations;
+using Microsoft.EntityFrameworkCore.ChangeTracking.Internal;
 
 namespace RojasT_ClinicaV_P1.Models
 {
     public class PropietarioMascota
     {
         public int Id { get; set; }
-
-        [Required(ErrorMessage = "Ingrese un nombre")]
         
         [StringLength(20)]    
         public string RojasT_Nombre { get; set; }
