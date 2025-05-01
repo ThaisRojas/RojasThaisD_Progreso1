@@ -8,7 +8,7 @@ namespace RojasT_ClinicaV_P1.Models
     {
         public int Id { get; set; }
         
-        [StringLength(20)]    
+        [StringLength(15) ]  
         public string RojasT_Nombre { get; set; }
 
         [Range(18, 65)]
