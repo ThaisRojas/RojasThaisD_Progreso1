@@ -13,8 +13,16 @@ namespace RojasT_ClinicaV_P1.Models
         public DateTime FechaVisita { get; set; }
 
         [Range(0, 1000, ErrorMessage = "El valor debe ser positivo")]
-        public decimal Tarifa { get; set; }
+        [StringLength(30)]
+        public string Tarifa { get; set; }
 
+        public decimal Monto => Tarifa switch
+        {
+            "vacunación" => 30m,
+            "revisión general" => 20m,
+            "cirugía" => 100m,
+            _ => 0m
+        };
         [Required(ErrorMessage = "Ingrese el motivo de la visita")]
         [StringLength(100)]
         public string Motivo { get; set; }
