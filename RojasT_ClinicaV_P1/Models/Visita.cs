@@ -30,7 +30,6 @@ namespace RojasT_ClinicaV_P1.Models
         [Display(Name = "¿Requiere medicación?")]
         public bool RequiereMedicacion { get; set; }
 
-        
         public int MascotaId { get; set; }
 
         [ForeignKey("MascotaId")]

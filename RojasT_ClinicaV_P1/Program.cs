@@ -1,4 +1,9 @@
+using Microsoft.EntityFrameworkCore;
+using RojasT_ClinicaV_P1.Models;
+
 var builder = WebApplication.CreateBuilder(args);
+builder.Services.AddDbContext<ClinicaContext>(options =>
+    options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
