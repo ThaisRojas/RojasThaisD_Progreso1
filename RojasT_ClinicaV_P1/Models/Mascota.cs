@@ -7,7 +7,7 @@ namespace RojasT_ClinicaV_P1.Models
     {
         public int Id { get; set; }
 
-        [StringLength(30)]
+        [StringLength(15)]
         public string Nombre { get; set; }
         public string Raza { get; set; }
 
